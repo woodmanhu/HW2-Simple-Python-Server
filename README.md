@@ -13,8 +13,9 @@ In class we built a simple socket interface. We set up a socket server, and had 
 To understand basic communication details at the point of the HTTP server
 Build a proper HTTP response
 ###Assignment:
-1. Clone the files from this repository
+1. Fork this project into your own repo
 2. Download Python from http://python.org/download/  (Be sure and download 2.7, not version 3)
+3. Submit by creating a pull request to the original.
 
 The HW2 project file has a working "site" that you should extend for this homework.  Open the server file and look over the code.  The   HTML files (*.html) are a very very basic "site" to get a sense of what's happening.  You should be able to run the server file and navigate to http://localhost:2000/index.html and click the links.   
 
