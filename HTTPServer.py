@@ -1,4 +1,3 @@
-
 #University of St. Thomas, Advanced Web Applications, SEIS752 Fall 2009
 #Lloyd Cledwyn
 #Basic Http Server example
@@ -19,7 +18,9 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         self.send_header("Content-type", "text/html")
         self.end_headers()
     def do_GET(self):
-       
+	
+
+					
         try:
             if self.path.endswith((".html",".htm")):
                 f = open(curdir + sep + self.path) #self.path has /index.html
@@ -42,7 +43,7 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
             if self.path.endswith(".gif"):
                 f = open(curdir + sep + self.path, 'rb') #self.path has /index.html
                 self.send_response(200)
-                self.send_header("Content-type", "text/html")
+                self.send_header("Content-type", "image/gif")
                 self.end_headers()
                 # Start sending content
                 self.wfile.write(f.read())
@@ -52,12 +53,13 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
             if self.path.endswith(".jpg"):
                 f = open(curdir + sep + self.path, 'rb') #self.path has /index.html
                 self.send_response(200)
-                self.send_header("Content-type", "text/html")
+                self.send_header("Content-type", "image/jpg")
                 self.end_headers()
                 # Start sending content
                 self.wfile.write(f.read())
                 f.close()
                 return
+					   
         except IOError:
             self.send_error(404,'File not found: %self' % self.path)
             
